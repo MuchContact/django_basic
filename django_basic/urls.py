@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', views.app_list, name='apps'),
+    url(r'^$', views.AppList.as_view(), name='apps'),
+    url(r'^$', views.AppDetail.as_view(), name='app-detail'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
